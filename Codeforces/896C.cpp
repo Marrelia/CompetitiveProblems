@@ -121,7 +121,7 @@ int main() {
   std::cin.tie(nullptr);
   std::cout.tie(nullptr);
 
-  std::cin >> n >> m >> seed >> vmax;
+  cin >> n >> m >> seed >> vmax;
   for (int i = 1; i <= n; ++i)
     a[i] = (rnd() % vmax) + 1;
 
@@ -155,9 +155,9 @@ int main() {
     else if (op == 2)
       assign(l, r, x);
     else if (op == 3)
-      std::cout << find(l, r, x) << '\n';
+      cout << find(l, r, x) << '\n';
     else
-      std::cout << get_sum(l, r, x, y) << '\n';
+      cout << get_sum(l, r, x, y) << '\n';
   }
   return 0;
 }

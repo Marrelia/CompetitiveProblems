@@ -103,6 +103,23 @@ int main() {
 }
 
 /*
-  total time complexity O(3qT + mn/(2T)) >= O(m * sqrt((3/2) * n))
-  when T = sqrt(n / 6)
+A generalized idea similar to Chtholly Tree
+In this, instead of mapping a interval of same number into one node
+We map a interval of the original array, and track if they reversed or not,
+for example, for the original array 1 2 3 4 5
+Say our chtholly tree is [(2,3, reverse=false), (1,1,reverse=false),
+(4,5,reverse=true)] our array that represent by current chtholly tree will be:
+2 3 1 5 4, by just concatenating all the nodes
+However, split operation will create a lot more intervals
+as there is no assign operation that can balance out time complexity
+So, we will rebuild the chtholly tree if # of intervals is greater than T
+
+total time complexity O(3qT + qn/(2T)) >= O(q * sqrt((3/2) * n))
+when T ~ sqrt(n)
+
+With this, we can ensure that the Chtholly Tree runs in O(q sqrt(n))
+
+In rebuild, same as the above example,
+we will just treat the array after reversing as the original array
+and do the chtholly tree from begining on that array
 */

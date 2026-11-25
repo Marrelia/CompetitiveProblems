@@ -1,7 +1,9 @@
 #include <algorithm>
 #include <cstring>
 #include <ctime>
+#include <iostream>
 #include <random>
+
 
 #define fi first
 #define se second

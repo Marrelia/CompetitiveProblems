@@ -1,10 +1,7 @@
 #include <algorithm>
 #include <cstring>
 #include <ctime>
-#include <iostream>
-#include <numeric>
 #include <random>
-#include <unordered_map>
 
 #define fi first
 #define se second
